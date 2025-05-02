@@ -6,11 +6,11 @@ Automate job listing analysis and tracking with OpenAI and Airtable using Make (
 
 This project aims to assist individuals actively searching for job opportunities by automating the collection, analysis, and classification of job listings from various sources. By leveraging **Make.com**, **OpenAI's ChatGPT**, and **Airtable**, the system allows the user to:
 
-- Extract job listings from RSS feeds
+- Collect job offers from RSS feeds
 - Summarize and analyze job descriptions using GPT
 - Store and manage results in a structured Airtable database
 
-This workflow minimizes manual effort and ensures no opportunity is missed during the search.
+It streamlines the job search process, making it easier to track and prioritize the most relevant opportunities.
 
 **1. Business Question**
 
@@ -22,7 +22,7 @@ This workflow minimizes manual effort and ensures no opportunity is missed durin
 
 **2. Dataset**
 
-The system processes job posts from RSS feeds (e.g., job boards) and extracts key information using HTTP and AI tools.
+Job data is pulled from RSS feeds of job boards and enriched using OpenAI and HTTP requests.
 
 **1. Input: RSS Job Listings**
 
@@ -37,23 +37,26 @@ Each job listing contains:
 
 Example output fields stored in Airtable:
 
-| Job Title      | Company      | GPT Summary                     | Link                    | Tags     | Match Score         |
-|----------------|--------------|----------------------------------|-------------------------|----------|----------------------|
-| Data Analyst   | BackMarket   | Short summary (3 bullet points)  | www.example.com/job123  | Python   | Strong match (GPT)   |
+![image](https://github.com/user-attachments/assets/5f594310-6153-4c0c-a970-d7437a324920)
+
 
 **3. Method: Automation Workflow**
 
 The following steps are automated using Make:
 
-1. **Trigger (Scheduler):** Run daily or hourly to check new listings  
-2. **RSS Feed:** Pull job postings from selected RSS URLs  
-3. **Airtable Search:** Prevent duplicates by checking if a job already exists  
-4. **HTTP Request:** Retrieve full job descriptions  
-5. **Sleep (Delay):** Add delay to avoid API throttling  
-6. **ChatGPT Prompt (1):** Summarize job description into short bullet points  
-7. **ChatGPT Prompt (2):** Assess match with candidate profile or extract key skills  
-8. **HTTP File:** (Optional) Retrieve company logo or attachment  
-9. **Airtable Create:** Save all results into a job tracker table  
+1. **Trigger (Scheduler):** Run daily to check new listings
+2. **Router (Connect):** Connects multiple job sources (via different RSS feeds)   
+3. **RSS Feed:** Pull job postings from selected RSS URLs  
+4. **Airtable Search (Filter):** Prevent duplicates by checking if a job already exists  
+5. **HTTP Request:** Retrieve full job descriptions  
+6. **Sleep (Delay):** Add delay to avoid API throttling  
+7. **ChatGPT Prompt (1):** Summarize job description with key informations
+8. **ChatGPT Prompt (2):** Assess match with candidate profile 
+9. **Airtable Create:** Save all results into a job tracker table
+10. **Ignore Module:** Skips some iterations to manage OpenAI usage limits  
+
+![image](https://github.com/user-attachments/assets/5e253265-6e6c-4057-bb53-32827d250bc5)
+
 
 ## Data Visualization
 
