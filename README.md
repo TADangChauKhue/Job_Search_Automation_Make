@@ -55,7 +55,7 @@ The following steps are automated using Make:
 9. **Airtable Create:** Save all results into a job tracker table
 10. **Ignore Module:** Skips some iterations to manage OpenAI usage limits  
 
-## Data Visualization
+## Flow Visualization
 
 This scenario is visualized in Make as a no-code flow:
 
