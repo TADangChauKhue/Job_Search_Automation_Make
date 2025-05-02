@@ -55,14 +55,11 @@ The following steps are automated using Make:
 9. **Airtable Create:** Save all results into a job tracker table
 10. **Ignore Module:** Skips some iterations to manage OpenAI usage limits  
 
-![image](https://github.com/user-attachments/assets/5e253265-6e6c-4057-bb53-32827d250bc5)
-
-
 ## Data Visualization
 
 This scenario is visualized in Make as a no-code flow:
 
-![Scenario Screenshot](https://your-upload-link-or-local-path.png)
+![image](https://github.com/user-attachments/assets/5e253265-6e6c-4057-bb53-32827d250bc5)
 
 The green modules represent OpenAI prompts used to generate summaries and analyze matches.
 
