@@ -1,6 +1,6 @@
 # Job_Search_Automation_Make
 
-Automate job listing analysis and tracking with OpenAI and Airtable using Make (formerly Integromat). This project helps job seekers save time by summarizing and organizing job opportunities automatically.
+Automate job listing analysis and tracking with OpenAI and Airtable using Make (formerly Integromat). This project helps job seekers save time by summarizing and organizing job opportunities automatically using match assessment scores.
 
 ## Introduction
 
