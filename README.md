@@ -37,7 +37,8 @@ Each job listing contains:
 
 Example output fields stored in Airtable:
 
-![image](https://github.com/user-attachments/assets/5f594310-6153-4c0c-a970-d7437a324920)
+<img width="1911" height="620" alt="image" src="https://github.com/user-attachments/assets/00499d31-4538-435d-b953-f89fe566e166" />
+
 
 
 **3. Method: Automation Workflow**
